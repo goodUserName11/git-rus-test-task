@@ -41,7 +41,7 @@ BEGIN
         id_calling_card,
         ROW_NUMBER() OVER (
           PARTITION BY id_calling_card
-          ORDER BY hosp_date_begin
+          ORDER BY hosp_date_begin, id
         ) AS rn,
         hosp_date_begin,
         hosp_date_end,
